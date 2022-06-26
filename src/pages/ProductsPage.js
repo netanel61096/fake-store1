@@ -2,8 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductComponent from "../component/ProductComponent";
-
-export default function ProductsPage(){
+import Style from './ProductsPage.module.css'
+export default function ProductsPage(props){
     const[products,setProducts]=useState([])
     const params=useParams()
     useEffect(function(){
@@ -12,6 +12,6 @@ export default function ProductsPage(){
     },[])
     // console.log(products);
     return <div>
-          <ProductComponent product={products}/>
+          <ProductComponent product={products} addCart={props.addCart} cartArr={props.cartArr} removeCart={props.removeCart}/>
     </div>
 }

@@ -1,0 +1,27 @@
+.item{
+    /* border: solid 6px black; */
+    display: flex;
+    width: 500px;
+    height: 443px;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    margin: auto;
+    position: relative;
+    top: 80px;
+    text-align: center;
+}
+
+.img{
+    height: 200px;
+    width: 200px;
+    opacity: 0.9;  
+}
+.price{
+    color: black;
+    font-size:25px ;
+    font-weight: 700;
+}

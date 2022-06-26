@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import HomeComponent from "../component/HomeComponent";
-
+import Style from './HomePage.module.css'
 export default function HomePage() {
   const [catgories, setCatgories] = useState();
   useEffect(function () {
@@ -11,7 +11,7 @@ export default function HomePage() {
   }, []);
   console.log(catgories);
   return catgories ? (
-    <div className="home">
+    <div >
       <HomeComponent catgories={catgories} />
     </div>
   ) : (

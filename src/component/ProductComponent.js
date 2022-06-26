@@ -1,20 +1,26 @@
 import { Link } from "react-router-dom";
-
+import AddCartButton from "./AddCartButton";
+import BottunAddCart from "./BottunAddCart";
+import Style from './ProductComponent.module.css'
 export default function ProductComponent(props){
-return props.product? <div className="product">
+
+    return props.product? <div className={Style.products}>
     {props.product.map(item=>
-    <div className="item">
      <Link 
     end="true"
-    className="link2"
     to={`/item/${item.id}`}
     key={`${item.id}`}
     >
-        <img src={`${item.image}`} style={{height: "150px",width:"150px",borderRadius:"20px"}}></img>
-        <div className="price">{item.price}$</div>
-        <p>{item.title}</p>
+        <div className={Style.item}>
+        <img src={`${item.image}`} className={Style.img}></img>
+        {props.cartArr.find(v=>v.id==item.id)  ?
+        <BottunAddCart stock={props.cartArr.find(v=>v.id==item.id).stock}  addCart={props.addCart}
+        removeCart={props.removeCart} item={item}/>:
+        <AddCartButton addCart={props.addCart} item={item} removeCart={props.removeCart}/> },
+        {item.title}
+        <div className={Style.price}>{item.price}$</div>
+        </div>
     </Link>
-    </div>
     )}
 </div>
 : ' '

@@ -1,0 +1,13 @@
+.cart{
+padding: 10px;
+font-size: 25px;
+background-color: white;
+border: solid 1px gray;
+text-align: center;
+width: 280px;
+height: 600px;
+overflow: auto;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}

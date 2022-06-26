@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
-
+import Style from './HomeComponent.module.css'
 export default function HomeComponent(props){
-return props.catgories? <div className="Active">
+return props.catgories? <div className={Style.Active}>
     {props.catgories.map(c=> 
-    <div  className="active">
-     <Link 
-    end="true"
-    className="link"
+    <Link end="true"
+    className={Style.active}
     to={`/category/${c}`}
-    key={`${c}123`}
-    >{c}</Link></div>)}
+    key={`${c}123`}><div  className={Style.link}>
+      
+    
+    {c}</div></Link>)}
 </div>
 : ' '
 }

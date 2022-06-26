@@ -1,0 +1,17 @@
+.div{
+    border: solid 2px black;
+    font-size: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 4px;
+    justify-content: center;
+}
+.ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.price{
+    font-size: 20px;
+    font-weight: 700;
+}
